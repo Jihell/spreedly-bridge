@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Jihel\\OmnipaySpreedlyBridge\\": "src",
+            "Jihel\\OmnipaySpreedlyBridgeBundle\\": "src",
             "Omnipay\\SpreedlyBridge\\": "omnipay"
         }
     }
