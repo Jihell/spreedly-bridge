@@ -1,0 +1,21 @@
+{% extends 'JihelOmnipaySpreedlyBridgeBundle::layout.html.twig' %}
+
+{% trans_default_domain 'JihelSpreedlyBridge' %}
+
+{% block jihel_omnipay_spreedly_bridge_body %}
+
+    <h2>{{ 'receiver.show.title'|trans({'%name%': receiver.companyName}) }}</h2>
+
+    <p>{{ receiver.receiverType }}</p>
+    <p>{{ receiver.token }}</p>
+    <p>{{ receiver.hostnames }}</p>
+    <p>{{ receiver.state }}</p>
+
+    <div class="btn-group">
+        <a class="btn btn-default" href="{{ path('JihelOmnipaySpreedlyBridgeBundle_receiver_index') }}">
+            <span class="glyphicon glyphicon-arrow-left"></span>
+            {{ 'receiver.btn.back'|trans }}
+        </a>
+    </div>
+
+{% endblock jihel_omnipay_spreedly_bridge_body %}

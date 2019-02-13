@@ -1,0 +1,28 @@
+receiver:
+    none: "Aucun receiver créé."
+    btn:
+        create: "Créer un nouveau receiver"
+        add: "Ajouter"
+        show: "Afficher"
+        edit: "Modifier"
+        back: "Retour"
+    type:
+        test: "Test"
+        prod: "Production"
+    show:
+        title: Détail du receiver %name%
+
+credential:
+    safe:
+        0: Non
+        1: Oui
+
+payment:
+    state:
+        authorized: Authorisé
+        deposited: Payé
+        credited: Rembousé
+        failed: Echoué
+        new: Nouveau
+        canceled: Annulé
+        pending: Attente 3ds

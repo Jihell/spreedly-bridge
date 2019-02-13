@@ -1,0 +1,11 @@
+parameters:
+    jihel.omnipay.gateway.spreedly_bridge.class: Omnipay\SpreedlyBridge\Gateway
+
+services:
+    jihel.omnipay.gateway.spreedly_bridge:
+        class: %jihel.omnipay.gateway.spreedly_bridge.class%
+        calls:
+            - ['setUser', ['%spreedly_user%']]
+            - ['setSecret', ['%spreedly_secret%']]
+        tags:
+            - { name: omnipay.gateway, alias: SpreedlyBridge }

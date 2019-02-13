@@ -1,0 +1,19 @@
+JihelOmnipaySpreedlyBridgeBundle_receiver_index:
+    path: /
+    defaults: { _controller: JihelOmnipaySpreedlyBridgeBundle:Receiver:index }
+
+JihelOmnipaySpreedlyBridgeBundle_receiver_create:
+    path: /create
+    defaults: { _controller: JihelOmnipaySpreedlyBridgeBundle:Receiver:create }
+
+JihelOmnipaySpreedlyBridgeBundle_receiver_show:
+    path: /{token}/show
+    defaults: { _controller: JihelOmnipaySpreedlyBridgeBundle:Receiver:show }
+
+JihelOmnipaySpreedlyBridgeBundle_receiver_edit:
+    path: /{token}/edit
+    defaults: { _controller: JihelOmnipaySpreedlyBridgeBundle:Receiver:edit }
+
+JihelOmnipaySpreedlyBridgeBundle_receiver_delete:
+    path: /{token}/delete
+    defaults: { _controller: JihelOmnipaySpreedlyBridgeBundle:Receiver:delete }

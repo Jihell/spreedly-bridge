@@ -1,0 +1,54 @@
+{% extends 'JihelOmnipaySpreedlyBridgeBundle::layout.html.twig' %}
+
+{% trans_default_domain 'JihelSpreedlyBridge' %}
+
+{% block jihel_omnipay_spreedly_bridge_body %}
+
+    <div>
+        <div class="btn-group">
+            <a class="btn {% if 0 == receivers|length %}btn-primary{% else %}btn-default{% endif %}"
+               href="{{ path('JihelOmnipaySpreedlyBridgeBundle_receiver_create') }}">
+                <span class="glyphicon glyphicon-plus"></span>
+                {{ 'receiver.btn.create'|trans }}
+            </a>
+        </div>
+    </div>
+
+    {% if 0 == receivers|length %}
+        <div class="alert alert-warning">
+            {{ 'receiver.none'|trans }}
+        </div>
+    {% else %}
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Token</th>
+                <th>Hostnames</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            {% for receiver in receivers %}
+                <tr>
+                    <td>
+                        {{ receiver.companyName }}
+                        <span class="label {% if receiver.receiverType == 'test' %}label-info{% else %}label-warning{% endif %}">
+                            {{ receiver.receiverType }}
+                        </span>
+                    </td>
+                    <td>{{ receiver.token }}</td>
+                    <td>{{ receiver.hostnames }}</td>
+                    <td>
+                        <div class="btn-group">
+                            <a class="btn btn-default" href="{{ path('JihelOmnipaySpreedlyBridgeBundle_receiver_show', {token: receiver.token}) }}">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                {{ 'receiver.btn.show'|trans }}
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+
+{% endblock jihel_omnipay_spreedly_bridge_body %}

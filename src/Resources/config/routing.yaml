@@ -1,0 +1,3 @@
+JihelOmnipaySpreedlyBridgeBundle_receiver:
+    resource: '@JihelOmnipaySpreedlyBridgeBundle/Resources/config/routes/receiver.yml'
+    prefix: /receiver

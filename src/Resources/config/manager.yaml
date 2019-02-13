@@ -1,0 +1,23 @@
+parameters:
+    jihel.omnipay.manager.receiver.class: Jihel\OmnipaySpreedlyBridgeBundle\Manager\ReceiverManager
+    jihel.omnipay.manager.credit_card.class: Jihel\OmnipaySpreedlyBridgeBundle\Manager\CreditCardManager
+    jihel.omnipay.manager.transaction.class: Jihel\OmnipaySpreedlyBridgeBundle\Manager\TransactionManager
+
+services:
+    jihel.omnipay.manager.receiver:
+        class: %jihel.omnipay.manager.receiver.class%
+        arguments:
+            - '@doctrine.orm.entity_manager'
+            - '@jihel.omnipay.bridge.receiver'
+    jihel.omnipay.manager.credit_card:
+        class: %jihel.omnipay.manager.credit_card.class%
+        arguments:
+            - '@doctrine.orm.entity_manager'
+            - '@jihel.omnipay.bridge.credit_card'
+    jihel.omnipay.manager.transaction:
+        class: %jihel.omnipay.manager.transaction.class%
+        arguments:
+            - '@doctrine.orm.entity_manager'
+            - '@event_dispatcher'
+            - '@omnipay'
+            - '@jihel.omnipay.manager.credit_card'

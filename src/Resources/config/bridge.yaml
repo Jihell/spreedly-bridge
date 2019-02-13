@@ -1,0 +1,14 @@
+parameters:
+    jihel.omnipay.bridge.receiver.class: Jihel\OmnipaySpreedlyBridgeBundle\Bridge\ReceiverBridge
+    jihel.omnipay.bridge.credit_card.class: Jihel\OmnipaySpreedlyBridgeBundle\Bridge\CreditCardBridge
+services:
+    jihel.omnipay.bridge.receiver:
+        class: %jihel.omnipay.bridge.receiver.class%
+        arguments:
+            - '%spreedly_user%'
+            - '%spreedly_secret%'
+    jihel.omnipay.bridge.credit_card:
+        class: %jihel.omnipay.bridge.credit_card.class%
+        arguments:
+            - '%spreedly_user%'
+            - '%spreedly_secret%'
