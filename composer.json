@@ -11,8 +11,7 @@
     "license": "MIT",
     "require": {
         "php": ">=7.0",
-        "symfony/symfony": ">=2.8",
-        "jihel/spreedly-viking-pay-receiver": "^1.0"
+        "symfony/symfony": ">=2.8"
     },
     "autoload": {
         "psr-4": {
